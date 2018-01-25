@@ -1,0 +1,60 @@
+
+
+/*general rules*/
+body, head, html {
+     margin: 0px;
+     font-family: Arial, Helvetica, sans-serif;
+     background-color:#fcfcfc;
+ }
+ /*top title*/
+.header {
+   color: #a3a3a3;
+   margin-top:5%;
+   margin-left: 30%; margin-right:30%;
+   text-align:center;
+}
+/*Story Entries are called "blocks"*/
+.block {
+   border-radius: 3px;
+   border:1px dotted #a6a6a6;
+   padding:20px;
+   background-color:#ffffff;
+   color: #333333;
+   margin-top:5%;
+   margin-left: 30%; margin-right:30%;
+}
+/*Titles of blocks*/
+.block h1 {
+   font-size:64px;
+   color:#a3a3a3;
+}
+/*text inside blocks*/
+.block p {
+   font-size:18px;
+   color: #a3a3a3;
+}
+/*login page*/
+.password {
+    width:75%;
+    font-size:64px;
+    text-align:center;
+}
+@media (max-width:1279px) {
+    /*top title*/
+    .header {  
+        color: #a3a3a3;
+        margin-top:5%;
+        margin-left: 2%; margin-right:2%;
+        text-align:center;
+    }
+    /*Story Entries are called "blocks"*/
+    .block {
+        border-radius: 3px;
+        border:1px dotted #a6a6a6;
+        padding:20px;
+        background-color:#ffffff;
+        color: #333333;
+        margin-top:5%;
+        margin-left: 2%; margin-right:2%;
+    }
+}

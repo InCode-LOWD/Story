@@ -1,0 +1,92 @@
+body,html {
+       background-color:white;
+}
+.settings {
+       background-color:#333333;
+       color:white;
+       font-size:1.2rem;
+       height:100vh;
+}
+.settings hr {
+       color:white;
+}
+.settings a {
+       color:white;
+       display: block;
+       cursor: pointer;
+       padding:5%;
+       background-color:#323232;
+       text-decoration: none;
+       height:75px;
+       font-size:1.5rem;
+       margin-bottom:5px;
+       transition:0.5s;
+}
+.settings a span {
+       position: relative;
+       top: 25%;
+       transform: translateY(-50%);
+       text-align:center;
+       align-self:center;
+       margin:auto;
+}
+.setting:hover {
+       background-color:#404040;
+}
+iframe {
+       width:100%;
+       height:100%;
+}
+#editor1 {
+       width:50%;
+       margin-left:25%;
+}
+.admintitle {
+       font-size:64px;
+       margin-left:100px;
+}
+.newtitle {
+       font-size:48px;
+       width:100%;
+}
+.appendstory {
+       font-size:32px;
+       margin-left:10%;
+       background-color:#cccccc;
+       border:1px solid white;
+       padding:5px;
+       
+       transition:0.1s;
+}
+.appendstory:hover {
+       color:white;
+       background-color:#595959;
+       border:1px solid black;
+}
+noscript div {
+       background-color:#ff9999;
+       color:white;
+}
+.error {
+       background-color:#ff9999;
+       color:white;
+}
+.block h1 a {
+       color:red;
+}
+.settingsmenu {
+       font-size:24px;
+       line-height: 2;
+       padding-left:10%;
+}
+.grid-90 {
+       color:black !important;
+}
+@media (max-width:1279px) {
+    .grid-10 {
+        width:30%;
+    }
+    .grid-90 {
+        width:70%;
+    }
+}

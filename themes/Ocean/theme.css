@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+/*general rules*/
+body, head, html {
+     margin: 0px;
+     font-family: Arial, Helvetica, sans-serif;
+     background-color:#042d59;
+ }
+ /*top title*/
+.header {
+   color: #82acd9;
+   margin-top:5%;
+   margin-left: 30%; margin-right:30%;
+   text-align:center;
+   font-family: 'Kaushan Script', cursive;
+}
+.header a {
+       color:#8aa2bd;
+}
+/*Story Entries are called "blocks"*/
+.block {
+   border-radius: 3px;
+   border:1px dotted #a6a6a6;
+   padding:20px;
+   background-color:#c2f2e9;
+   color: #333333;
+   margin-top:5%;
+   margin-left: 30%; margin-right:30%;
+}
+/*Titles of blocks*/
+.block h1 {
+   font-size:64px;
+   color: #361e7d;
+   font-family: 'Kaushan Script', cursive;
+}
+/*text inside blocks*/
+.block p {
+   font-size:18px;
+}
+/*login page*/
+.password {
+    width:75%;
+    font-size:64px;
+    text-align:center;
+}
+@media (max-width:1279px) {
+    /*top title*/
+    .header {  
+        color: #82acd9;
+        margin-top:5%;
+        margin-left: 2%; margin-right:2%;
+        text-align:center;
+    }
+    /*Story Entries are called "blocks"*/
+    .block {
+        border-radius: 3px;
+        border:1px dotted #a6a6a6;
+        padding:20px;
+        background-color:#c2f2e9;
+        color: #333333;
+        margin-top:5%;
+        margin-left: 2%; margin-right:2%;
+    }
+}
