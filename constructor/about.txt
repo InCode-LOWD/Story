@@ -1,6 +1,0 @@
-<p>The Incode Story is a comparatively advanced program for online blogging and story telling. It is open source and just works. Every element can be customized. It is like wordpress, but a lot smaller, and simpler.</p>
-
-<p>&nbsp;</p>
-
-<p>Version v1.1</p>
- awesome!!!</h2>
