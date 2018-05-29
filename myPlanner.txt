@@ -1,0 +1,1 @@
+[["Welcome to your Board!","Click on this text to edit it, or the delete button! You can click the add button for a new idea, and even press 'Tab' to quickly add one."]]
