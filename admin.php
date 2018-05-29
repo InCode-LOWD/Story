@@ -111,30 +111,35 @@
         <script src="https://cdn.ckeditor.com/ckeditor5/10.0.1/classic/ckeditor.js"></script>
                     
                     <div class="editor-cont"><p class="center"><input type="text" class="newtitle center" id="title" placeholder="Your Title" autocomplete="false" name="title" value="'.$constone[0].'"></p>
-                    <div name="editor1" id="editor" class="editor">
-                    </div></div>
+                    <textarea name="editor1" id="editor" class="editor">
+                    </textarea></div>
                     <p style="font-size:8px">CKEditor 5, using CDN. Works best with Opera and Chrome</p>
-                    <script>
-                        ClassicEditor
-                            .create( document.querySelector( \'#editor\' ), {
-                                removePlugins: [ \'EasyImage\' ],
-                                toolbar: ["heading","|","bold","italic","link","bulletedList","numberedList","blockQuote","undo","redo"]
-                            } )
-                            .catch( error => {
-                                console.error( error );
-                            } );
-                        function save() {
-                            document.getElementById("saveName").value = document.getElementById("title").value;
-                            document.getElementById("saveData").value = editor.getData();
-                            document.getElementById("saveForm").submit();
-                        }
-                    </script>
+                    
                     <button onclick="save();" class="appendstory">Submit Changes</button>
                     
                 <form method="post" action="admin.php?action=default&tab=append" id="saveForm">
                     <input type="hidden" value="" id="saveName" name="name">
                     <input type="hidden" value="" id="saveData" name="editor">
                 </form>
+                <script>
+                        var myeditor;
+                        ClassicEditor
+                            .create( document.querySelector( \'#editor\' ), {
+                                removePlugins: [ \'EasyImage\' ],
+                                toolbar: ["heading","|","bold","italic","link","bulletedList","numberedList","blockQuote","undo","redo"]
+                            } )
+                            .then (editor => {
+                                myeditor = editor;
+                            })
+                            .catch( error => {
+                                console.error( error );
+                            } );
+                        function save() {
+                            document.getElementById("saveName").value = document.getElementById("title").value;
+                            document.getElementById("saveData").value = myeditor.getData();
+                            document.getElementById("saveForm").submit();
+                        }
+                    </script>
         ';
     } else if($tab=="append") {
         $title = $_REQUEST['title'];
@@ -187,7 +192,7 @@
                 fclose($append);
             }
         } else { //edit == something or other
-            $title = $_REQUEST['title'];
+            $title = $_REQUEST['name'];
             $content = $_REQUEST['editor'];
             if($title!=""&&$content!="") { //resubmitted
                 $edit = fopen($edit,"w+");
@@ -207,32 +212,37 @@
                 <script src="https://cdn.ckeditor.com/ckeditor5/10.0.1/classic/ckeditor.js"></script>
                     
                     <div class="editor-cont"><p class="center"><input type="text" class="newtitle center" id="title" placeholder="Your Title" autocomplete="false" name="title" value="'.$constone[0].'"></p>
-                    <div name="editor1" id="editor" class="editor">
+                    <textarea name="editor1" id="editor" class="editor">
                     '.$constone[1].'
-                    </div>
+                    </textarea>
                     </div>
                     <p style="font-size:8px">CKEditor 5, using CDN. Works best with Opera and Chrome</p>
-                    <script>
-                        ClassicEditor
-                            .create( document.querySelector( \'#editor\' ), {
-                                removePlugins: [ \'EasyImage\' ],
-                                toolbar: ["heading","|","bold","italic","link","bulletedList","numberedList","blockQuote","undo","redo"]
-                            } )
-                            .catch( error => {
-                                console.error( error );
-                            } );
-                        function save() {
-                            document.getElementById("saveName").value = document.getElementById("title").value;
-                            document.getElementById("saveData").value = editor.getData();
-                            document.getElementById("saveForm").submit();
-                        }
-                    </script>
+                    
                     <button onclick="save();" class="appendstory">Submit Changes</button>
                     
                 <form method="post" action="admin.php?action=default&tab=edit&edit='.$edit.'" id="saveForm">
                     <input type="hidden" value="" id="saveName" name="name">
                     <input type="hidden" value="" id="saveData" name="editor">
                 </form>
+                <script>
+                        var myeditor;
+                        ClassicEditor
+                            .create( document.querySelector( \'#editor\' ), {
+                                removePlugins: [ \'EasyImage\' ],
+                                toolbar: ["heading","|","bold","italic","link","bulletedList","numberedList","blockQuote","undo","redo"]
+                            } )
+                            .then (editor => {
+                                myeditor = editor;
+                            })
+                            .catch( error => {
+                                console.error( error );
+                            } );
+                        function save() {
+                            document.getElementById("saveName").value = document.getElementById("title").value;
+                            document.getElementById("saveData").value = myeditor.getData();
+                            document.getElementById("saveForm").submit();
+                        }
+                    </script>
                 ';
             }
         }
@@ -564,26 +574,31 @@ function isSaved() {
                         </div>
                     </div>
                     <p style="font-size:8px">CKEditor 5, using CDN. Works best with Opera and Chrome</p>
-                    <script>
-                        ClassicEditor
-                            .create( document.querySelector( \'#editor\' ), {
-                                removePlugins: [ \'EasyImage\' ],
-                                toolbar: ["heading","|","bold","italic","link","bulletedList","numberedList","blockQuote","undo","redo"]
-                            } )
-                            .catch( error => {
-                                console.error( error );
-                            } );
-                        function save() {
-                            document.getElementById("saveData").value = editor.getData();
-                            document.getElementById("saveForm").submit();
-                        }
-                    </script>
+                    
                     <button onclick="save();" class="appendstory">Submit Changes</button>
                     
                 <form method="post" action="admin.php?action=default&tab=edit&edit='.$edit.'" id="saveForm">
                     <input type="hidden" value="" id="saveName" name="name">
                     <input type="hidden" value="" id="saveData" name="editor">
                 </form>
+                <script>
+                        var myeditor;
+                        ClassicEditor
+                            .create( document.querySelector( \'#editor\' ), {
+                                removePlugins: [ \'EasyImage\' ],
+                                toolbar: ["heading","|","bold","italic","link","bulletedList","numberedList","blockQuote","undo","redo"]
+                            } )
+                            .then (editor => {
+                                myeditor = editor;
+                            })
+                            .catch( error => {
+                                console.error( error );
+                            } );
+                        function save() {
+                            document.getElementById("saveData").value = myeditor.getData();
+                            document.getElementById("saveForm").submit();
+                        }
+                    </script>
             ';
         } else {
             fwrite($about, $editor);
