@@ -1,5 +1,7 @@
 body,html {
-       background-color:white;
+     margin: 0px;
+     font-family: Arial, Helvetica, sans-serif;
+     background-color:#f2f2f2;
 }
 .settings {
        background-color:#333333;
@@ -37,7 +39,7 @@ iframe {
        width:100%;
        height:100%;
 }
-#editor1 {
+.editor-cont {
        width:50%;
        margin-left:25%;
 }
@@ -48,6 +50,8 @@ iframe {
 .newtitle {
        font-size:48px;
        width:100%;
+       text-align:center;
+       margin:auto;
 }
 .appendstory {
        font-size:32px;
@@ -71,6 +75,13 @@ noscript div {
        background-color:#ff9999;
        color:white;
 }
+.fatalError {
+       background-color:#ff9999;
+       font-size:1.2em;
+       padding:15px;
+       border:1px solid red;
+       color:white;
+}
 .block h1 a {
        color:red;
 }
@@ -89,4 +100,197 @@ noscript div {
     .grid-90 {
         width:70%;
     }
+}
+.top-cont {
+    align-self:center;
+    padding-left:20%;
+    padding-right:20%;
+    text-align: center;
+    margin:auto;
+}
+.fa-plus-square:hover {
+    transform: rotate(90deg);
+    transition:0.3s;
+}
+.fa-trash-alt {
+    transition:0.2s;
+}
+.fa-trash-alt:hover {
+    transform: rotate(-20deg);
+    transition:0.2s;
+}
+.fa-pencil-alt {
+    transition:0.2s;
+}
+.fa-pencil-alt:hover {
+    transform: rotate(-90deg);
+}
+ /*top title*/
+.header {
+   color: #333333;
+   margin-top:5%;
+   margin-left: 30%; margin-right:30%;
+   text-align:center;
+}
+/*Story Entries are called "blocks"*/
+.block {
+   border-radius: 3px;
+   border:1px dotted #a6a6a6;
+   padding:20px;
+   background-color:rgb(250, 250, 250);
+   color: #333333;
+   margin-top:5%;
+   margin-left: 30%; margin-right:30%;
+}
+/*Titles of blocks*/
+.block h1 {
+   font-size:64px;
+}
+/*text inside blocks*/
+.block p {
+   font-size:18px;
+}
+/*login page*/
+.password {
+    width:75%;
+    font-size:64px;
+    text-align:center;
+}
+@media (max-width:1279px) {
+    /*top title*/
+    .header {  
+        color: #333333;
+        margin-top:5%;
+        margin-left: 2%; margin-right:2%;
+        text-align:center;
+    }
+    /*Story Entries are called "blocks"*/
+    .block {
+        border-radius: 3px;
+        border:1px dotted #a6a6a6;
+        padding:20px;
+        background-color:rgb(250, 250, 250);
+        color: #333333;
+        margin-top:5%;
+        margin-left: 2%; margin-right:2%;
+    }
+}
+
+
+
+/*
+____   _       _    _   _   _   _  _____  ____
+|   \  |      / \   |\  |   |\  |  |      |   \
+|___/  |     /___\  | \ |   | \ |  |__    |___/
+|      |     |   |  |  \|   |  \|  |      |   \
+|      |___  |   |  |   |   |   |  |____  |   |
+*/
+.add {
+    color: #5bed00;
+    font-size:100px;
+    /*-ms-transform: translateY(20%); 
+    -webkit-transform: translateY(20%);
+    transform: translateY(20%);*/
+    margin:20px;
+    cursor:pointer;
+}
+.icon {
+    float:right;
+    cursor:pointer;
+}
+.addchap {
+    color: #00d5ff;
+    font-size:100px;
+    /*-ms-transform: translateY(20%); 
+    -webkit-transform: translateY(20%);
+    transform: translateY(20%);*/
+    margin:20px;
+    cursor:pointer;
+}
+.delete {
+    color: #ff1c1c;
+    align-self: baseline;
+}
+button {
+    align-self:baseline;
+}
+#list {
+    display: inline-block;
+    /*overflow-x: scroll;*/
+    /*height:230px;*/
+    /*height:100%;
+    width:100%;*/
+}
+.idea {
+    float: left;
+    border:1px solid #272727;
+    border-radius:3px;
+    padding:10px;
+    margin:2px;
+    width:325px;
+    height:180px;
+}
+.idea h3 {
+    height:2em;
+    overflow-x: scroll;
+    cursor:pointer;
+}
+.idea textarea {
+    height:75px;
+    overflow-y: scroll;
+    cursor:pointer;
+}
+.idea h3:focus {
+    cursor:text;
+}
+.idea p:focus {
+    cursor:text;
+}
+.idea button { /*meant to be empty*/
+    
+}
+.newLine {
+    float:none;
+}
+.edit-title {
+    border: 0px solid white;
+    font-size:24px;
+    width:100%;
+    cursor:pointer;
+}
+.edit-chapter {
+    border: 0px solid white;
+    font-size:34px;
+    width:100%;
+    cursor:pointer;
+}
+.edit-body {
+    border: 1px solid white;
+    font-size:12px;
+    width:100%;
+    height:125px;
+    resize: none;
+    padding:3px;
+}
+.edit-body:hover {
+    border:1px solid gray;
+}
+.space {
+    height:115px;
+}
+#delete {
+    border-radius: 5px;
+    color: white;
+    background-color: #ff5656;
+    border: 2px solid red;
+}
+.save, #save {
+    border-radius: 5px;
+    color:white;
+    background-color:#3eed32;
+    border:2px solid #38ab30;
+}
+.selected {
+    border:1px solid #253d3b;
+    background-color:#cffffa;
 }
